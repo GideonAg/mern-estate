@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -186,6 +187,12 @@ const Profile = () => {
         >
           {loading ? "loading.." : "update"}
         </button>
+        <Link
+          to={"/create-listing"}
+          className="uppercase bg-green-700 p-3 rounded-lg text-white text-center hover:opacity-95"
+        >
+          create listing
+        </Link>
       </form>
       <div className="flex justify-between mt-5">
         <span onClick={handleDeletUser} className="text-red-700 cursor-pointer">
